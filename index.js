@@ -6,14 +6,7 @@ const authorInput = form['author'];
 const priorityInput = form['priority'];
 const categoryInput = form['category'];
 
-const books = [
-    // {
-    //     name: "Hobbit",
-    //     author: "Tolkien",
-    //     priority: 5,
-    //     category: "Fantasy"
-    // }
-];
+const books = JSON.parse(localStorage.getItem("books"));
 
 const addBook = (name, author, priority, category) => {
     books.push({
@@ -23,12 +16,15 @@ const addBook = (name, author, priority, category) => {
         category: category
     });
 
+    localStorage.setItem("books", JSON.stringify(books));
+
     return {name, author, priority, category}
 };
 
 const createBook = ({name, author, priority, category}) => {
     const bookDiv = document.createElement('div');
-    const bookName = document.createElement('h3');
+    bookDiv.classList.add('main__books__book');
+    const bookName = document.createElement('p');
     const bookAuthor = document.createElement('p');
     const bookPriority = document.createElement('p');
     const bookCategory = document.createElement('p');

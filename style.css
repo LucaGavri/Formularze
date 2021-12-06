@@ -5,11 +5,90 @@
 body{
     width: 100vw;
     min-height: 100vh;
-    background: chocolate;
+    font-family: "Roboto Light", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(157,253,45,1) 100%);
 }
 
+.main{
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*background: #ddd;*/
+}
+.main__title{
+    margin: 20px;
+}
+.main__descr{
+    font-size: 20px;
+    margin: 10px;
+}
+.main__form{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+label{
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+input, select{
+    width: 50%;
+    padding: 5px;
+    margin: 10px;
+    color: #222;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #222;
+    text-align: center;
+}
+
+select{
+    cursor: pointer;
+}
+
+.btn{
+    margin: 10px;
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 20px;
+    border: none;
+    background: #fff;
+    box-shadow: 3px 3px 8px #222;
+    cursor: pointer;
+}
 
 .main__books{
-    width: 90%;
-    background: violet;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.main__books__book{
+    padding: 10px;
+    margin: 5px;
+    background: #fff;
+    width: 30%;
+    min-width: 160px;
+    border-radius: 20px;
+    border: 2px solid #222222;
+
 }
