@@ -6,7 +6,7 @@ const authorInput = form['author'];
 const priorityInput = form['priority'];
 const categoryInput = form['category'];
 
-const books = JSON.parse(localStorage.getItem("books"));
+const books = JSON.parse(localStorage.getItem("books")) || [];
 
 const addBook = (name, author, priority, category) => {
     books.push({
