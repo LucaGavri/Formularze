@@ -7,3 +7,9 @@ body{
     min-height: 100vh;
     background: chocolate;
 }
+
+
+.main__books{
+    width: 90%;
+    background: violet;
+}
